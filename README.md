@@ -69,5 +69,5 @@ The minecraft textures used in the given .npy files are:
     'orange_terracotta'
     'blue_terracotta'
 
-This script was written in python 3.7.6 by myself, with some assistance from lmpynix on i/o, dithering, and general usability improvements.
+This script was written in python 3.7.6 by myself, with improvements from lmpynix on i/o, dithering, and general usability improvements.
 It depends upon the following python modules: numpy, scipy.signal, matplotlib.pyplot, PIL.Image, os.path, argparse, and multiprocessing.
