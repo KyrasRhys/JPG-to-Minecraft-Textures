@@ -7,7 +7,7 @@ Created on Sat Aug  8 11:11:20 2020
 
 @author: KyrasRhys
 
-Parsing, dithering improvements, and general QOL changes courtesy of L. Power
+Parsing, dithering improvements, and general QOL changes courtesy of lmpynix
 """
 # The goal of this script is to take a .jpg, downsample it by some integer factor...
 # And then quantize using the average rgb value of some minecraft block textures
