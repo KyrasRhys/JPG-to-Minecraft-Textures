@@ -2,7 +2,7 @@
 """
 Created on Mon Aug 10 14:27:00 2020
 
-@author: Obmuw
+@author: KyrasRhys
 """
 import multiprocessing
 
