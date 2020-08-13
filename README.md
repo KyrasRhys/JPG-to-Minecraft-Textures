@@ -7,7 +7,6 @@ The resulting image acts as a useful reference when constructing minecraft pixel
 
 To generate the final image, the script ('jpg_to_mc.py') opens the file 'blocks.npy' in the folder 'mc_textures'. 'blocks.npy' is a dictionary wrapped in a numpy array that uses the names of each block used as keys that link to the block's average corresponding rgb values. To save time, 'jpg_to_mc.py' does not directly computed the closest colored minecraft block at each pixel directly. Instead, the script opens 'color_array_fin.npy' in 'mc_textures', which is a numpy object array of size (256,256,256). The indices of each elemet of that array correspond to a particular rgb color, and each element of the array correspond to the name of the minecraft block closest in color to the given rgb index. Both of these files are generated using 'color_precomputation.py'. Be aware that this file can take quite a while to run.
 
-'blocks.npy' has been provided in 'mc_textures'. 'color_array_fin.npy' can be downloaded at https://drive.google.com/file/d/1IZD3CZ_XOiRGJWOefoKIxZaE3jkPPvZH/view?usp=sharing
 
 To replace them (effectively changing the set of textures used to generate every image), modify the dictionary 'blocks' in 'color_precomputation.py' with the name of the blocks you want and their corresponding average rgb colors. From there, simply run 'color_precompuation.py', and either place the resulting files in 'mc_textures', or pass their locations as arguements when running 'jpg_to_mc.py'.
 
