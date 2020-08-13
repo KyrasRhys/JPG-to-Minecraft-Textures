@@ -139,5 +139,4 @@ def color_comp(m):
 
 if __name__ == '__main__':
     ca = color_comp(4)
-    np.save('blocks.npy',blocks)
-    np.save('color_array_fin.npy',ca)
+    np.savez_compressed('color_array_and_blocks.npz',color_array=ca,blocks=blocks)
