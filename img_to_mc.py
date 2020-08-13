@@ -37,13 +37,13 @@ def main():
     parser.add_argument("-d", "--decimate", type=int, default=1, help="Decimation factor to make image smaller.")
     parser.add_argument("-o", "--output", help="Output filename.", default="mc.jpg")
     parser.add_argument("-i", "--interactive", action='store_true', help="Force interactive mode")
-    parser.add_argument("-a", "--colorarray", default="./mc_textures/color_array_fin.npy", help="File path of alternate texture color to use.")
-    parser.add_argument("-b", "--blockfile", default="./mc_textures/blocks.npy", help="File path of alternate block mapping file to use.")
+    parser.add_argument("-a", "--colorarray", default="./mc_textures/color_array_and_blocks.npz", help="File path of alternate texture color to use.")
     parser.add_argument("-t", "--texture_dir", default="./mc_textures/", help="Path to texture directory")
     args = parser.parse_args()
     img = plt.imread(path.abspath(args.input))
-    colors_array = np.load(path.abspath(args.colorarray), allow_pickle=True)
-    blocks = np.load(path.abspath(args.blockfile), allow_pickle="TRUE").item()
+    input_blocks = np.load(path.abspath(args.colorarray), allow_pickle=True)
+    colors_array = input_blocks['color_array']
+    blocks = input_blocks['blocks'].item()
 
     process(args.interactive, args.decimate, img, colors_array, path.abspath(args.output), blocks, path.abspath(args.texture_dir))
     
